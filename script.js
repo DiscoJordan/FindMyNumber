@@ -8,8 +8,8 @@ console.log(rightnumber);
 guessbutton.onclick = function () {
 
     let number = document.getElementById('input').value;
-    if (number > 100 || number < 1 ) {
-        document.getElementById('str').innerHTML = `Write a number between 1-100!`;
+    if (number > 10 || number < 1 ) {
+        document.getElementById('str').innerHTML = `Write a number between 1-10!`;
     } else if(number ==rightnumber && guesses>0){
         document.getElementById('str').innerHTML = `${number} is a right number!`;
         document.getElementById('window__guesses').innerHTML = `Congratulations, right number! Want to try again?`;
