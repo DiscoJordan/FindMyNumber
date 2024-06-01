@@ -21,7 +21,8 @@ html {
     text-wrap: nowrap;
 }
 
-.header {
+header {
+    z-index: 1;
     width: 100%;
     position: fixed;
     display: flex;
@@ -30,6 +31,28 @@ html {
     padding: 1em;
     color: black;
     background-color: rgba(255, 255, 255, 0.5);
+}
+footer {
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    
+}
+footer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    gap: 1em;
+    font-size: 0.5em;
+}
+.logo{
+    filter: brightness(100);
+    width: 60px;
+    height: 60px;
 }
 
 .container {
@@ -94,7 +117,9 @@ input:focus {
     box-shadow: 0px 0px 20px 1px #0000003f;
     border: 1px solid rgba(255, 255, 255, 0.454);
 }
-
+button:active #html{
+background-color: red;
+}
 button , .newgame{
     position: relative;
     font-size: 17px;

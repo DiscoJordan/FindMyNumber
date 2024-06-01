@@ -7,7 +7,6 @@ const button = document.getElementById("guessbutton")
 const guessesTitle = document.getElementById("window__guesses")
 const html = document.getElementById("html")
 const actArr = [again, form, title]
-console.log(rightnumber);
 
 function handleGuess() {
     let number = document.getElementById('input').value;
