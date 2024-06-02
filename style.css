@@ -83,18 +83,7 @@ input {
     box-shadow: 0px 0px 20px -18px;
 }
 
-input:hover {
-    border: 2px solid lightgrey;
-    box-shadow: 0px 0px 20px -17px;
-}
 
-input:active {
-    transform: scale(0.95);
-}
-
-input:focus {
-    border: 2px solid grey;
-}
 
 .window {
     margin: 40px;
@@ -113,13 +102,7 @@ input:focus {
     width: fit-content;
 }
 
-.window:hover {
-    box-shadow: 0px 0px 20px 1px #0000003f;
-    border: 1px solid rgba(255, 255, 255, 0.454);
-}
-button:active #html{
-background-color: red;
-}
+
 button , .newgame{
     position: relative;
     font-size: 17px;
@@ -138,37 +121,6 @@ button , .newgame{
     background-color: rgba(255, 255, 255, 0.4);
    }
    
-   button:hover, .newgame:hover {
-    
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-   }
-   
-   button:active , .newgame:active{
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-   }
-   
-   button::after , .newgame::after{
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-    background-color: rgba(255, 255, 255, 0.5);
-   }
-   
-
-   
-   button:hover::after , .newgame:hover::after{
-    transform: scaleX(1.1) scaleY(1.6);
-    opacity: 0;
-   }
-
 
 a {
     text-decoration: none;
@@ -220,4 +172,51 @@ form.active {
     .window {
         padding: 2em;
     }
+}
+@media (hover:hover){
+    .window:hover {
+        box-shadow: 0px 0px 20px 1px #0000003f;
+        border: 1px solid rgba(255, 255, 255, 0.454);
+    }
+    
+    button:hover, .newgame:hover {
+    
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+       }
+       
+       button:active , .newgame:active{
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+       }
+       
+       button::after , .newgame::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+        background-color: rgba(255, 255, 255, 0.5);
+       }
+    input:hover {
+        border: 2px solid lightgrey;
+        box-shadow: 0px 0px 20px -17px;
+    }
+    
+    input:active {
+        transform: scale(0.95);
+    }
+    
+    input:focus {
+        border: 2px solid grey;
+    }
+    button:hover::after , .newgame:hover::after{
+        transform: scaleX(1.1) scaleY(1.6);
+        opacity: 0;
+       }
+
 }
