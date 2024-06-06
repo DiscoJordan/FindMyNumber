@@ -14,7 +14,12 @@ function handleGuess() {
     //number is not equal 1-10
     if (number > 10 || number < 1) {
         document.getElementById('str').innerHTML = `Write a number between 1-10!`;
+        msg.style.fontWeight = ('600')
         msg.style.color = ('red')
+        setTimeout(() => {
+            msg.style.fontWeight = ('400')
+        }, 200);
+        
 
     } else if (number == rightnumber && guesses > 0) {
         //number is right, win
@@ -28,6 +33,12 @@ function handleGuess() {
         actArr.forEach(ele => {
             ele.classList.add("active")
         })
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                window.location.reload();
+            }
+        }
+        )
     } else if (guesses > 1) {
         //number is not right
         msg.style.color = ('black')
@@ -35,7 +46,6 @@ function handleGuess() {
         guesses--;
 
         document.getElementById('window__guesses').innerHTML = `You have ${guesses} guesses`;
-play = false
         html.classList.add("lose")
         setTimeout(() => {
             html.classList.remove("lose")
@@ -46,12 +56,20 @@ play = false
     else {
         //losee
         document.getElementById('header1').innerHTML = `No more guesses :((`;
-        html.classList.add("lose")
+        html.style.backgroundColor='black'
+        html.style.color = 'White'
         guessesTitle.classList.add("active")
 
         actArr.forEach(ele => {
             ele.classList.add("active")
         })
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                window.location.reload();
+            }
+        }
+        )
     }
     document.getElementById('input').value = ''
 }
@@ -61,17 +79,17 @@ form.addEventListener("submit", function (event) {
     handleGuess()
 })
 
+
+
+
 button.addEventListener("click", function () {
     handleGuess()
 })
-if(!play){
-    document.addEventListener("keydown", function (event) {
-    // If the user presses the "Enter" key on the keyboard
-    if (event.key === "Enter") {
-        // Cancel the default action, if needed
+
+again.addEventListener("click", function (event) {
         window.location.reload();
-        play = true
-    }
-});
+
 }
+)
+
 
