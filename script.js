@@ -7,7 +7,6 @@ const button = document.getElementById("guessbutton")
 const guessesTitle = document.getElementById("window__guesses")
 const html = document.getElementById("html")
 const actArr = [again, form, title]
-let play = true
 function handleGuess() {
     let number = document.getElementById('input').value;
     let msg = document.getElementById('str')
@@ -86,10 +85,6 @@ button.addEventListener("click", function () {
     handleGuess()
 })
 
-again.addEventListener("click", function (event) {
-        window.location.reload();
 
-}
-)
 
 
